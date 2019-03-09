@@ -9,6 +9,7 @@ language: cpp
 os:
   - linux
   - osx
+  - windows
 
 compiler:
   - gcc
@@ -20,6 +21,7 @@ env:
 branches:
   only:
     - master
+    - travis
 
 before_install:
   - ./tests/travis/step-before-install.sh
