@@ -23,9 +23,11 @@ mkdir "${BUILD_DIR}"
 cd "${BUILD_DIR}"
 
 cmake --version
+cmake --help
 cmake -DCMAKE_BUILD_TYPE=Release -DVULKAN_IMPLEMENTATION=talvos -DSPIRV_WERROR=OFF ..
 
 set +e
+ls -l
 ${CMD_TIMEOUT} ${BUILD_TIMEOUT} make -j2
 BUILD_STATUS=$?
 set -e
