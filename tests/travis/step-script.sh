@@ -28,7 +28,7 @@ cmake -DCMAKE_BUILD_TYPE=Release -DVULKAN_IMPLEMENTATION=talvos -DSPIRV_WERROR=O
 
 set +e
 ls -l
-${CMD_TIMEOUT} ${BUILD_TIMEOUT} make -j2
+${CMD_TIMEOUT} ${BUILD_TIMEOUT} cmake --build .
 BUILD_STATUS=$?
 set -e
 
